@@ -1,0 +1,51 @@
+07-1.표쥰모듈
+
+1. from 모듈이름 import 가져오고 싶은 변수 또는 함수
+2. from 모듈이름 as 원하는식별자
+
+- math
+ : sin, cos, tan, log, ceil(올림), floor(내림), round(반올림, 주의해서 써야함)
+ 
+- random
+ a. random() : 0.0 < x < 1.0 float값 리턴
+ b. uniform(min, max) : float값 리턴
+ c. randrange(min, max) : int값 리턴
+ d. choice(list) : 리스트 안 요소 랜덤 리턴
+ e. shuffle(list) : 리스트 섞음
+ f. sample(list, k=숫자) : 샘플링
+ 
+- sys : 시스템정보
+
+- os
+ : mkdir, rmdir, rename, remove
+
+- datetime : 날짜, 시간
+
+- time : sleep
+
+- urlib : URL을 다루는 라이브러리
+ a. request() : 이것도 함수가 아닌 모듈임.
+     a1. urlopen()
+     a2. read()
+
+07-2.외부모듈
+
+1. 모듈설치 : (!)pip install 모듈이름
+2. 구글링 : python 모듈이름 으로 구글링하면 서치됨
+
+- BeautifulSoup : bs4모듈 안에있는 웹페이지 분석,스크레이핑 모듈  -> 기상청날씨 예제
+ a. 기상청 날씨 예제
+     a1. request.urlopen() #수업시간엔 HTML주소 사용, 책의 예제는 XML사용.                                           [응용 해볼 것]
+
+- Flask : 웹개발 모듈. @를 사용하여 데코레이터 사용.                                                                 [다시 해볼 것]
+
+07-3. 모듈 만들기 : 너무 유연해서 안전장치가 필요.
+
+- __name__ : 라는 변수가 있음. '__main__' 으로 출력되며, 엔트리포인트or메인 이라 부름. 모듈 내부에서 출력하면 모듈의 이름을 나타냄.
+
+-  __init__.py
+ a. 패키지를 읽을때 어떤 처리가 필요 or 패키지 내부 모듈을 한꺼번에 가져오고싶을 때, 패키지 폴더 내부에 __init__.py 만들어 사용.
+ b. 패키지를 읽을때 __init__.py 를 가장 먼저 실행.
+ c. __all__ 에 읽을 모듈 리스트를 넣어 사용. from test_package import * 로 실행.
+ 
+3. 바이너리 데이터 : 읽을때만 'wb'로 읽어주면 됨
