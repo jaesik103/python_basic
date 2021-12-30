@@ -1,0 +1,49 @@
+07-4. 외부모듈 사용 (네이버 영화 순위, 파파고 open API)
+
+1. 네이버 영화 순위(html 구조.pptx 참조)
+ 
+ - BeautifulSoup 를 이용하여 url오픈
+ - html tag를 이용하여 스크래핑
+
+2. 파파고 open API
+
+ -day_6 참조
+
+08-1. 클래스의 기본
+
+1. 클래스라는 것을 기반으로 객체를 만들고, 그러한 객체를 우선으로 생각하여 프로그래밍
+2. 여러가지 속성을 가지고 있는것을 객체라고 부름. example : 학생
+3. 객체와 관련된 코드를 분리하여 프로그래밍 하는것을 지향
+4.
+```  # 클래스선언
+       class Student:
+            pass
+       # 인스턴스
+       student = Student() # student가 인스턴스임```
+
+5. 클래스 이름과 같은 함수를 생성자라 함. __init__(self, 추가적인 매개변수), __del__은 소멸자
+6. 클래스의 함수를 메소드라 함.
+
+08-2. 클래스의 추가적인 구문
+
+1. isinstance(인스턴스, 클래스) : 인스턴스가 어떤 클래스로부터 만들어졌는지 참/거짓으로 판별해줌.
+2. __str__ : str()을 호출하면 __str__()함수가 호출됨.
+3. 클래스 변수 : 클래스이름.변수이름
+4. 메소드 :
+ a. ```class 클래스이름:    # 클래스 함수 만들기
+        @classmethod
+        def 클래스함수(cls, 매개변수):
+            pass```
+ b. 클래스이름.함수이름(매개변수) # 클래스 함수 호출
+5. 프라이빗 변수 : self.__radius    __<변수이름> 하면 외부에서 못씀
+6. getter, setter : 프라이빗 변수 값 추출, 변경
+ a. 데코레이터를 이용해 쉽게 만들 수 있음.
+    ```# 게터와 세터를 선언
+       @property  #
+       def radius(self):
+           return self.__radius
+       @radius.setter #
+       def radius(self, value):
+           adasdasdasd
+   
+       
