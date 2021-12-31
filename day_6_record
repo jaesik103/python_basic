@@ -44,6 +44,6 @@
            return self.__radius
        @radius.setter #
        def radius(self, value):
-           adasdasdasd
+           self.__radius = value
    
        
